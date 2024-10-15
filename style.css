@@ -16,8 +16,11 @@
     padding-top: 50px;
     background-color: black;
     border-radius: 10px;
+    max-width: 335px;  /* Set a maximum width to limit expansion */
+    width: 100%;        /* Allow it to be responsive */
+    overflow: hidden; 
 }
-.calculator form input{
+.calculator form button{
     
     outline: 0;
     width: 60px;
@@ -42,8 +45,12 @@ form .Display{
 form .Display input{
     text-align: right;
     flex: 1;
-    box-shadow: 0;
-    font-size: 45px;  
+    box-shadow: 0;  
+    color: #fff;
+    border: 0;
+    outline: 0;
+    font-size: 50px;
+    padding-right: 20px;
 }
 .Display .max{
     border-radius: 10px;
@@ -51,6 +58,9 @@ form .Display input{
     margin-top: -50px;
     margin-bottom: -20px;
     background-color: black;
+    color: #fff;
+    
+    
 }
 .change .change-color{
     background-color: rgb(255, 140, 0);

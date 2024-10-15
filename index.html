@@ -9,45 +9,42 @@
 <body>
     <div class="container">
         <div class="calculator">
-            <form>
+            <form name="calculatorForm">
                 <div class="Display">
-                    <input type="text" name="Display" class="max">
+                    <input type="text" id="display" class="max">
                 </div>
                 <div class="change">
-                    <input type="text" value="AC" class="light-col" onclick="Display.value = ''">
-
-                    <input type="text" value="DE" class="light-col" onclick="Display.value = Display.value.toString().slice(0,-1)">
-
-                    <input type="text" value="%" class="light-col" onclick="Display.value += '%'">
-
-                    <input type="text" value="/" class="change-color" onclick="Display.value += '/'">
+                    <button type="button" class="light-col" onclick="document.getElementById('display').value = ''">AC</button>
+                    <button type="button" class="light-col" onclick="document.getElementById('display').value = document.getElementById('display').value.toString().slice(0,-1)">DE</button>
+                    <button type="button" class="light-col" onclick="document.getElementById('display').value += '%'">%</button>
+                    <button type="button" class="change-color" onclick="document.getElementById('display').value += '/'">/</button>
                 </div>
                 <div class="change">
-                    <input type="text" value="7" onclick="Display.value += '7'">
-                    <input type="text" value="8" onclick="Display.value += '8'">
-                    <input type="text" value="9" onclick="Display.value += '9'">
-                    <input type="text" value="*" class="change-color" onclick="Display.value += '*'">
+                    <button type="button" onclick="document.getElementById('display').value += '7'">7</button>
+                    <button type="button" onclick="document.getElementById('display').value += '8'">8</button>
+                    <button type="button" onclick="document.getElementById('display').value += '9'">9</button>
+                    <button type="button" class="change-color" onclick="document.getElementById('display').value += '*'">*</button>
                 </div>
                 <div class="change">
-                    <input type="text" value="4" onclick="Display.value += '4'">
-                    <input type="text" value="5" onclick="Display.value += '5'">
-                    <input type="text" value="6" onclick="Display.value += '6'">
-                    <input type="text" value="-" class="change-color" onclick="Display.value += '-'">
+                    <button type="button" onclick="document.getElementById('display').value += '4'">4</button>
+                    <button type="button" onclick="document.getElementById('display').value += '5'">5</button>
+                    <button type="button" onclick="document.getElementById('display').value += '6'">6</button>
+                    <button type="button" class="change-color" onclick="document.getElementById('display').value += '-'">-</button>
                 </div>
                 <div class="change">
-                    <input type="text" value="1" onclick="Display.value += '1'">
-                    <input type="text" value="2" onclick="Display.value += '2'">
-                    <input type="text" value="3" onclick="Display.value += '3'">
-                    <input type="text" value="+" class="change-color" onclick="Display.value += '+'">
+                    <button type="button" onclick="document.getElementById('display').value += '1'">1</button>
+                    <button type="button" onclick="document.getElementById('display').value += '2'">2</button>
+                    <button type="button" onclick="document.getElementById('display').value += '3'">3</button>
+                    <button type="button" class="change-color" onclick="document.getElementById('display').value += '+'">+</button>
                 </div>
                 <div class="change">
-                    <input type="text" value="00" onclick="Display.value += '00'">
-                    <input type="text" value="0" onclick="Display.value += '0'">
-                    <input type="text" value="." onclick="Display.value += '.'">
-                    <input type="text" value="=" class="change-color" onclick="Display.value = eval(Display.value)">
+                    <button type="button" onclick="document.getElementById('display').value += '00'">00</button>
+                    <button type="button" onclick="document.getElementById('display').value += '0'">0</button>
+                    <button type="button" onclick="document.getElementById('display').value += '.'">.</button>
+                    <button type="button" class="change-color" onclick="document.getElementById('display').value = eval(document.getElementById('display').value)">=</button>
                 </div>
             </form>
         </div>
-    </div>
+    </div>    
 </body>
 </html>
